@@ -23,7 +23,7 @@
   </thead>
   <tr *ngFor="let id of getFiltrados(); let i=index">
     <td>
-      <img src="fotos/id.foto" width='64px' height='64px' *ngIf='id.foto!=""'/>
+      <img src={{id.foto}} width='64px' height='64px' *ngIf='id.foto!=""'/>
       <p *ngIf='id.foto==""'>(sin foto!)</p>
     </td>
     <td>{{ id.marca | uppercase }}</td>
