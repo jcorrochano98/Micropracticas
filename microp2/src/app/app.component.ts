@@ -11,10 +11,10 @@ export class AppComponent {
   title = 'MicroP2';
 
   public EstadoCoche:any = EstadoCoche;  // ESTA LINEA SOLO SIRVE PARA PODER USAR EstadoCoche en el TEMPLATE.
-  public coches:Array<Coche>=[new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'i604029419.webp',EstadoCoche.BUENO),
-  new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'coche01.jpg',EstadoCoche.BUENO),new Coche('renault','scenic',
-  new Date(2007,10,1),new Date(2018,3,1),5000,'coche01.jpg',EstadoCoche.BUENO), new Coche('tesla','model 3',new Date(2007,10,1),new Date(2018,3,1),5000,'',EstadoCoche.BUENO),
-  new Coche('fiat','panda',new Date(2007,10,1),new Date(2018,3,1),5000,'coche01.jpg',EstadoCoche.MALO)];
+  public coches:Array<Coche>=[new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'https://www.farosypilotos.es/wp-content/uploads/2017/04/grand_scenic-REAR.jpg',EstadoCoche.BUENO),
+  new Coche('renault','scenic',new Date(2007,10,1),new Date(2018,3,1),5000,'https://www.farosypilotos.es/wp-content/uploads/2017/04/grand_scenic-REAR.jpg',EstadoCoche.BUENO),new Coche('renault','scenic',
+  new Date(2007,10,1),new Date(2018,3,1),5000,'https://www.farosypilotos.es/wp-content/uploads/2017/04/grand_scenic-REAR.jpg',EstadoCoche.BUENO), new Coche('tesla','model 3',new Date(2007,10,1),new Date(2018,3,1),5000,'https://amp.businessinsider.com/images/5c6d714a262898671d5920d2-750-563.jpg',EstadoCoche.BUENO),
+  new Coche('fiat','panda',new Date(2007,10,1),new Date(2018,3,1),5000,'https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Fiat-Panda_2013_C01.jpg?itok=LxJTvYeN',EstadoCoche.MALO)];
 
   public getCoches():Array<Coche> {
     return this.coches;
