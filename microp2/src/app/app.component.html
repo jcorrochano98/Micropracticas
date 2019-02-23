@@ -23,22 +23,22 @@
   </thead>
   <tr *ngFor="let id of getFiltrados(); let i=index">
     <td>
-      <img src={{id.foto}} width='64px' height='64px' *ngIf='id.foto!=""'/>
-      <p *ngIf='id.foto==""'>(sin foto!)</p>
+      <img src={{coches[id].foto}} width='64px' height='64px' *ngIf='coches[id].foto!=""'/>
+      <p *ngIf='coches[id].foto==""'>(sin foto!)</p>
     </td>
-    <td>{{ id.marca | uppercase }}</td>
-    <td align='left'>{{ id.modelo | lowercase }}</td>
-    <td align='center'>{{ id.fecha_modelo | date:'yyyy' }}</td>
-    <td align='center'>{{ id.fecha_venta | date:'MM-yyyy' }}</td>
+    <td>{{ coches[id].marca | uppercase }}</td>
+    <td align='left'>{{ coches[id].modelo | lowercase }}</td>
+    <td align='center'>{{ coches[id].fecha_modelo | date:'yyyy' }}</td>
+    <td align='center'>{{ coches[id].fecha_venta | date:'MM-yyyy' }}</td>
     <td align='right'>
-      <p [ngClass]="{estadoBuenoClass: [id.estado]==EstadoCoche.BUENO, estadoMaloClass: [id.estado]!=EstadoCoche.BUENO}">
-          {{ id.precio | number: '1.0-0'}}€
+      <p [ngClass]="{estadoBuenoClass: [coches[id].estado]==EstadoCoche.BUENO, estadoMaloClass: [coches[id].estado]!=EstadoCoche.BUENO}">
+          {{ coches[id].precio | number: '1.0-0'}}€
       </p>
     </td>
-    <td>{{ id.getPVP() | number: '1.0-0' }}€</td>
+    <td>{{ coches[id].getPVP() | number: '1.0-0' }}€</td>
     <td>
-      <button type='button' (click)='comp_rebajar(i)'>Rebajar</button>
-      <button type='button' (click)='comp_vendido(i)'>Vendido</button>
+      <button type='button' (click)='comp_rebajar(id)'>Rebajar</button>
+      <button type='button' (click)='comp_vendido(id)'>Vendido</button>
     </td>
   </tr>
 </table>
